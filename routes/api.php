@@ -27,4 +27,7 @@ Route::controller(App\Http\Controllers\AuthController::class)->group(function ()
 
 Route::middleware('auth:api')->group(function () {
     Route::get('/status', [App\Http\Controllers\DashboardController::class, 'status']);
+
+    Route::apiResource('/materials', App\Http\Controllers\MaterialController::class);
+    Route::apiResource('/buildings', App\Http\Controllers\BuildingController::class);
 });
