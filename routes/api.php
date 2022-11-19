@@ -30,4 +30,5 @@ Route::middleware('auth:api')->group(function () {
 
     Route::apiResource('/materials', App\Http\Controllers\MaterialController::class);
     Route::apiResource('/buildings', App\Http\Controllers\BuildingController::class);
+    Route::apiResource('/producers', App\Http\Controllers\ProducerController::class);
 });
